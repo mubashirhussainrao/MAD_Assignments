@@ -18,5 +18,11 @@ class MainActivity : AppCompatActivity() {
             var uri= Uri.parse("tel:"+edtph.text.toString())
             startActivity(Intent(Intent.ACTION_DIAL,uri))
         }
+        var btngeo : Button = findViewById(R.id.btngeo)
+        var editgeo:EditText=findViewById<EditText>(R.id.edgeo)
+        btngeo.setOnClickListener{
+            var uri =Uri.parse("geo:O,O?q="+editgeo.text.toString())
+            startActivity(Intent(Intent.ACTION_VIEW,uri))
+        }
     }
 }
